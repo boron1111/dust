@@ -4,8 +4,8 @@ c=find(timerecord>datenum(2015,12,23,9,0,0));
 b=b(1);
 c=c(1);
 subplot(2,1,1)
-plot(timerecord(b:c),polyval(p,dust1(b:c))/255*5,'r-',timerecord(b:c),(dust2(b:c))/255*5,'b-')
-ylim([0.5 1.5])
+plot(timerecord(b:c),polyval(p,dust2(b:c))/255*5,'b-',timerecord(b:c),(dust1(b:c))/255*5,'r-')
+ylim([0 1])
 xlim([timerecord(b) timerecord(c)]);
 
 section_1=floor(timerecord(b)*24);
@@ -16,7 +16,7 @@ tickStrs=strcat(cellstr(num2str(month(ticks))),'.',cellstr(num2str(day(ticks))),
 set(gca,'xtick',ticks,'xticklabel',tickStrs);
 
 subplot(2,1,2)
-plot(timerecord(b:c),(polyval(p,dust1(b:c))-dust2(b:c))/255*5,'g-')
+plot(timerecord(b:c),(polyval(p,dust2(b:c))-dust1(b:c))/255*5,'g-')
 xlim([timerecord(b) timerecord(c)]);
 set(gca,'xtick',ticks,'xticklabel',tickStrs);
 
