@@ -47,6 +47,6 @@ Temporary Items
 .apdisk
 
 # matlab
-.mat
+*.mat
 
-.gif
+*.gif
