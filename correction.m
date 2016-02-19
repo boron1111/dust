@@ -1,7 +1,7 @@
 a=load('p');
 global p
 p=a.p;
-length1=15*24*60;
+length1=3*24*60;
 d1=dust1(end-length1:end);d2=dust2(end-length1:end);
 x=ones(length1/60,1)*60;
 c1=mat2cell(d1(1:length1),x,1);
@@ -15,5 +15,5 @@ p=p(end,1:2);
 hold on
 plot(e2,polyval(p,e2),'-')
 hold off
-clear ans a b c c1 c2 d1 d2 e1 e2 i
+clear ans a b c c1 c2 d1 d2 e1 e2 i length1 
 clear x

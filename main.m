@@ -15,7 +15,7 @@ clear a b c d
 
 global dust
 % dust=mcuCom.Dust;
-dust=serial('com5');
+dust=serial('com9');
 set(dust,'baudrate',115200);
 fopen(dust);
 

@@ -1,4 +1,6 @@
 a=inputdlg;
+stop(t1)
+stop(t3)
 b=urlread(a{1});
 c=regexpi(b,'http://[a-zA-Z0-9./?]+wx_fmt=gif','match');
 datestr=regexpi(b,'>[0-9]+-[0-9]+-[0-9]+<','match');
@@ -6,7 +8,7 @@ filename=[num2str(datenum(datestr{1}(2:end-1))),'.gif'];
 urlwrite(c{1},filename);
 load('colormap.mat');
 
-% filename='736328.gif';
+% filename='736364.gif';
 info=imfinfo(filename);
 x=zeros(length(info),1);
 y=zeros(length(info),1);
@@ -26,3 +28,6 @@ end
 % figure;plot(x,'.-')
 figure('name',datestr{1}(2:end-1));plot(y,'.-')
 set(gca,'ylim',[1 8],'xtick',1:8:56,'xlim',[1 56]);
+clear a b c d e datastr filename load info x y id e_id z map
+start(t1)
+start(t3)

@@ -12,16 +12,17 @@ for id=1:length(sogouDates)
 end
 
 % sogouDates=sogouDates(~isnan(sogouDusts));
-sogouDusts=sogouDusts(~isnan(sogouDusts));
+% sogouDusts=sogouDusts(~isnan(sogouDusts));
 
-% figure;plot(sogouDates,sogouDusts);
-% % figure;plot(sogouDates,dust2_mean);
+figure;plot(sogouDates,sogouDusts);
+figure;plot(sogouDates,dust1_mean);
+figure;plot(sogouDates,dust2_mean);
 
-% figure;plot(sogouDusts,dust1_mean,'.-');
-% figure;plot(sogouDusts,dust2_mean,'.-');
+figure;plot(sogouDusts,dust1_mean,'.-');
+figure;plot(sogouDusts,dust2_mean,'.-');
 
-t=1*24;
-figure;plot(sogouDusts(end-t+1:end),'.-');xlim([1,t]);ylim([0,500])
+% t=1*24;
+% figure;plot(sogouDusts(end-t+1:end),'.-');xlim([1,t]);ylim([0,500])
 
 % figure;plot(sogouDates,sogouDusts,'.-');ylim([0,500])
 % disp(mean(sogouDusts))
